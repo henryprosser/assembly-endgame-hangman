@@ -27,3 +27,25 @@ header > p {
   font-weight: 500;
   color: #8e8e8e;
 }
+
+.game-status {
+  background-color: #10a95b;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f9f4da;
+  margin-block: 30px;
+}
+
+.game-status h2 {
+  margin: 5px;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.game-status p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 5px;
+}
