@@ -13,6 +13,13 @@ body {
   justify-content: center;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   text-align: center;
 }
@@ -35,7 +42,8 @@ header > p {
   flex-direction: column;
   align-items: center;
   color: #f9f4da;
-  margin-block: 30px;
+  margin: 15px 0px 45px;
+  width: 100%;
 }
 
 .game-status h2 {
@@ -48,4 +56,18 @@ header > p {
   font-weight: 500;
   font-size: 1.2rem;
   margin: 5px;
+}
+
+.language-chips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  max-width: 350px;
+}
+
+.language-element {
+  padding: 4.5px;
+  border-radius: 3px;
 }

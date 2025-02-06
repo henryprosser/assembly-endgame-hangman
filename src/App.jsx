@@ -1,4 +1,18 @@
+import { languages } from "../languages";
+
 export default function AssemblyEndgame() {
+  const languageElements = languages.map((item) => {
+    return (
+      <span
+        style={{ backgroundColor: item.backgroundColor, color: item.color }}
+        className="language-element"
+        key={item.name}
+      >
+        {item.name}
+      </span>
+    );
+  });
+
   return (
     <main>
       <header>
@@ -12,6 +26,7 @@ export default function AssemblyEndgame() {
         <h2>You win!</h2>
         <p>Well done! 🎉</p>
       </section>
+      <section className="language-chips">{languageElements}</section>
     </main>
   );
 }
