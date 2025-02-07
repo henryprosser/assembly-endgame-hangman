@@ -93,3 +93,42 @@ header > p {
   background-color: #323232;
   border-bottom: 1px solid #f9f4da;
 }
+
+.keyboard {
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 500px;
+}
+
+.keyboard-letter {
+  width: 40px;
+  height: 40px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #d7d7d7;
+  color: #1e1e1e;
+  background-color: #fcba29;
+  cursor: pointer;
+}
+
+.new-game {
+  margin-top: 40px;
+  background-color: #11b5e5;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  width: 225px;
+  height: 40px;
+  padding: 6px 12px;
+  display: block;
+  margin-inline: auto;
+  cursor: pointer;
+}
