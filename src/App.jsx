@@ -14,7 +14,7 @@ export default function AssemblyEndgame() {
 
   const lettersDisplay = currentWord.split("").map((letter, index) => (
     <span className="letter" key={index}>
-      {letter.toUpperCase()}
+      {guessedLetters.includes(letter) ? letter.toUpperCase() : ""}
     </span>
   ));
 
