@@ -3,8 +3,17 @@ import { useState } from "react";
 import clsx from "clsx";
 
 export default function AssemblyEndgame() {
+  // State values
   const [currentWord, setCurrentWord] = useState("react");
   const [guessedLetters, setGuessedLetters] = useState([]);
+
+  // Derived values
+  const wrongGuessCount = guessedLetters.filter(
+    (letter) => !currentWord.includes(letter)
+  ).length;
+
+  // Static values
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
   function addGuessedLetter(letter) {
     setGuessedLetters((prevLetters) =>
@@ -17,8 +26,6 @@ export default function AssemblyEndgame() {
       {guessedLetters.includes(letter) ? letter.toUpperCase() : ""}
     </span>
   ));
-
-  const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
   const keyboardDisplay = alphabet.split("").map((letter) => (
     <button
