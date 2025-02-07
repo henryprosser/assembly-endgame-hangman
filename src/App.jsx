@@ -32,6 +32,11 @@ export default function AssemblyEndgame() {
     );
   }
 
+  function startNewGame() {
+    setCurrentWord(getRandomWord());
+    setGuessedLetters([]);
+  }
+
   const lettersDisplay = currentWord.split("").map((letter, index) => (
     <span className="letter" key={index}>
       {guessedLetters.includes(letter) ? letter.toUpperCase() : ""}
@@ -103,7 +108,11 @@ export default function AssemblyEndgame() {
       <section className="language-chips">{languageElements}</section>
       <section className="word">{lettersDisplay}</section>
       <section className="keyboard">{keyboardDisplay}</section>
-      {isGameOver && <button className="new-game">New Game</button>}
+      {isGameOver && (
+        <button className="new-game" onClick={startNewGame}>
+          New Game
+        </button>
+      )}
     </main>
   );
 }
