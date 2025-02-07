@@ -159,6 +159,11 @@ header > p {
   cursor: pointer;
 }
 
+.keyboard-letter:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
 .new-game {
   margin-top: 40px;
   background-color: #11b5e5;
