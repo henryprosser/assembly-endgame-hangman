@@ -71,3 +71,25 @@ header > p {
   padding: 4.5px;
   border-radius: 3px;
 }
+
+.word {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.letter {
+  width: 40px;
+  height: 40px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  color: #f9f4da;
+  background-color: #323232;
+  border-bottom: 1px solid #f9f4da;
+}
