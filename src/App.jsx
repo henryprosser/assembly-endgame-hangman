@@ -4,15 +4,19 @@ import { useState } from "react";
 export default function AssemblyEndgame() {
   const [currentWord, setCurrentWord] = useState("react");
 
-  const lettersArr = Array.from(currentWord, (char) => char.toUpperCase());
+  const lettersDisplay = currentWord.split("").map((letter, index) => (
+    <span className="letter" key={index}>
+      {letter.toUpperCase()}
+    </span>
+  ));
 
-  const lettersDisplay = lettersArr.map((letter, index) => {
-    return (
-      <span key={index} className="letter">
-        {letter}
-      </span>
-    );
-  });
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+  const keyboardDisplay = alphabet.split("").map((letter, index) => (
+    <button className="keyboard-letter" key={index}>
+      {letter.toUpperCase()}
+    </button>
+  ));
 
   const languageElements = languages.map((item) => {
     return (
@@ -41,6 +45,8 @@ export default function AssemblyEndgame() {
       </section>
       <section className="language-chips">{languageElements}</section>
       <section className="word">{lettersDisplay}</section>
+      <section className="keyboard">{keyboardDisplay}</section>
+      <button className="new-game">New Game</button>
     </main>
   );
 }
