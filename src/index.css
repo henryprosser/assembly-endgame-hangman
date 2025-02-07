@@ -132,3 +132,11 @@ header > p {
   margin-inline: auto;
   cursor: pointer;
 }
+
+.correct {
+  background-color: #10a95b;
+}
+
+.incorrect {
+  background-color: #ec5d49;
+}
