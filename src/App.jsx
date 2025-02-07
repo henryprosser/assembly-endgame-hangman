@@ -42,11 +42,13 @@ export default function AssemblyEndgame() {
     </button>
   ));
 
-  const languageElements = languages.map((item) => {
+  const languageElements = languages.map((item, index) => {
     return (
       <span
         style={{ backgroundColor: item.backgroundColor, color: item.color }}
-        className="language-element"
+        className={clsx("language-element", {
+          lost: wrongGuessCount > index,
+        })}
         key={item.name}
       >
         {item.name}
