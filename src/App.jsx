@@ -1,6 +1,7 @@
 import { languages } from "../languages";
 import { useState } from "react";
 import clsx from "clsx";
+import { getFarewellText } from "./utils/utils";
 
 export default function AssemblyEndgame() {
   // State values
@@ -16,8 +17,11 @@ export default function AssemblyEndgame() {
   const isGameWon = currentWord
     .split("")
     .every((letter) => guessedLetters.includes(letter));
-
   const isGameOver = isGameLost || isGameWon;
+
+  const lastGuessedLetter = guessedLetters[guessedLetters.length - 1];
+  const isLastGuessIncorrect =
+    lastGuessedLetter && !currentWord.includes(lastGuessedLetter);
 
   // Static values
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -66,6 +70,7 @@ export default function AssemblyEndgame() {
   const gameStatusClass = clsx("game-status", {
     won: isGameWon,
     lost: isGameLost,
+    farewell: !isGameOver && isLastGuessIncorrect,
   });
 
   return (
@@ -89,6 +94,9 @@ export default function AssemblyEndgame() {
             <h2>Game over!</h2>
             <p>You lose! Better start learning Assembly 😭</p>
           </>
+        )}
+        {!isGameOver && isLastGuessIncorrect && (
+          <p>{getFarewellText(languages[wrongGuessCount - 1].name)} 🫡 </p>
         )}
       </section>
       <section className="language-chips">{languageElements}</section>

@@ -55,6 +55,17 @@ header > p {
   background-color: #ba2a2a;
 }
 
+.farewell {
+  background-color: #7a5ea7;
+  border: 1px dashed #323232;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.farewell :last-child {
+  font-style: normal;
+}
+
 .game-status h2 {
   font-size: 1.75rem;
   font-weight: 500;
