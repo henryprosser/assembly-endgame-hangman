@@ -2,6 +2,7 @@ import { languages } from "../languages";
 import { useState } from "react";
 import clsx from "clsx";
 import { getFarewellText, getRandomWord } from "./utils/utils";
+import Confetti from "react-confetti";
 
 export default function AssemblyEndgame() {
   // State values
@@ -119,6 +120,7 @@ export default function AssemblyEndgame() {
           New Game
         </button>
       )}
+      {isGameWon && <Confetti recycle={false} numberOfPieces={1000} />}
     </main>
   );
 }
