@@ -37,11 +37,17 @@ export default function AssemblyEndgame() {
     setGuessedLetters([]);
   }
 
-  const lettersDisplay = currentWord.split("").map((letter, index) => (
-    <span className="letter" key={index}>
-      {guessedLetters.includes(letter) ? letter.toUpperCase() : ""}
-    </span>
-  ));
+  const lettersDisplay = currentWord.split("").map((letter, index) => {
+    const shouldRevealLetter = isGameLost || guessedLetters.includes(letter);
+    const letterClassName = clsx("letter", {
+      "not-guessed": isGameOver && !guessedLetters.includes(letter),
+    });
+    return (
+      <span key={index} className={letterClassName}>
+        {shouldRevealLetter ? letter.toUpperCase() : ""}
+      </span>
+    );
+  });
 
   const keyboardDisplay = alphabet.split("").map((letter) => (
     <button

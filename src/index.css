@@ -133,6 +133,10 @@ header > p {
   border-bottom: 1px solid #f9f4da;
 }
 
+.not-guessed {
+  color: #ec5d49;
+}
+
 .keyboard {
   margin-top: 70px;
   display: flex;
