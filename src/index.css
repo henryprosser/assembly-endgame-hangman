@@ -59,10 +59,14 @@ header > p {
   background-color: #7a5ea7;
   border: 1px dashed #323232;
   font-style: italic;
-  font-weight: 400;
 }
 
-.farewell :last-child {
+#farewell-text span {
+  font-style: italic;
+}
+
+#farewell-text {
+  font-weight: 400;
   font-style: normal;
 }
 

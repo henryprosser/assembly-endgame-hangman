@@ -112,7 +112,10 @@ export default function AssemblyEndgame() {
           </>
         )}
         {!isGameOver && isLastGuessIncorrect && (
-          <p>{getFarewellText(languages[wrongGuessCount - 1].name)} 🫡 </p>
+          <p id="farewell-text">
+            <span>{getFarewellText(languages[wrongGuessCount - 1].name)}</span>{" "}
+            🫡
+          </p>
         )}
       </section>
       <section className="language-chips">{languageElements}</section>
