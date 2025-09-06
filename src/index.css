@@ -57,7 +57,6 @@ header > p {
 
 .farewell {
   background-color: #7a5ea7;
-  border: 1px dashed #323232;
   font-style: italic;
 }
 
@@ -152,9 +151,9 @@ header > p {
   align-items: center;
   padding: 6px;
   border-radius: 4px;
-  border: 1px solid #d7d7d7;
-  color: #1e1e1e;
-  background-color: #fcba29;
+  border: 1px solid #f9f4da;
+  color: #f9f4da;
+  background-color: #262626;
   cursor: pointer;
 }
 
@@ -166,7 +165,6 @@ header > p {
 .new-game {
   margin-top: 40px;
   background-color: #11b5e5;
-  border: 1px solid #d7d7d7;
   border-radius: 4px;
   width: 225px;
   height: 40px;
@@ -174,14 +172,17 @@ header > p {
   display: block;
   margin-inline: auto;
   cursor: pointer;
+  border: none;
 }
 
 .correct {
   background-color: #10a95b;
+  border: 1px solid #10a95b;
 }
 
 .incorrect {
   background-color: #ec5d49;
+  border: 1px solid #ec5d49;
 }
 
 .sr-only {
